@@ -65,7 +65,7 @@ test_features = pd.DataFrame(test_features_scaled, columns=[features])
 train_features = pd.DataFrame(train_features_scaled, columns=[features])
 print(test_features.describe())
 
-# Use Random Forest for predicting company bankruptcy and print confusion matrix
+# Use Random Forest for predicting company bankruptcy and print classification report
 base_rf_model = RandomForestClassifier(random_state=0)
 base_rf_model.fit(train_features, train_labels)
 base_rf_model_pred = base_rf_model.predict(test_features)
