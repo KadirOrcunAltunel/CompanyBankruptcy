@@ -5,7 +5,7 @@ According to the Security Exchange Commission (SEC), a company in the American m
 
 In this dataset, the fiscal year prior to the filing of bankruptcy under either Chapter 11 or Chapter 7 is labeled as "Bankruptcy" (1) for the subsequent year. Conversely, if the company does not experience these bankruptcy events, it is considered to be operating normally (0). The dataset is complete, without any missing values, synthetic entries, or imputed added values.
 
-The resulting dataset comprises a total of 78,682 observations of firm-year combinations. To facilitate model training and evaluation, the dataset is divided into three subsets based on time periods. The training set consists of data from 1999 to 2011, the validation set comprises data from 2012 to 2014, and the test set encompasses the years 2015 to 2018. The test set serves as a means to assess the predictive capability of models in real-world scenarios involving unseen cases.
+The resulting dataset comprises a total of 78,682 observations of firm-year combinations. To facilitate model training and evaluation, the dataset is divided into three subsets based on time periods. The training set consists of data from 1999 to 2011, the validation set comprises data from 2012 to 2014, and the test set encompasses the years 2015 to 2018. The test set serves as a means to assess the predictive capability of models in real-world scenarios involving unseen cases. The other variables in the dataset are:
 
 * X1	Current assets - All the assets of a company that are expected to be sold or used as a result of standard
 business operations over the next year.
@@ -37,3 +37,6 @@ indirect costs, income taxes, and its dividends to shareholders.
 It may include interest and dividends from investments.
 * X17	Total Liabilities - The combined debts and obligations that the company owes to outside parties.
 * X18	Total Operating Expenses - The expenses a business incurs through its normal business operations.
+
+The predictor variable in the dataset was substentially imbalanced. The offset the imbalance, I used precision recall curve and ROC curve from scikit-learn to find the best threshold to improve f1 score.
+
