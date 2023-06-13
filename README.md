@@ -38,5 +38,23 @@ It may include interest and dividends from investments.
 * X17	Total Liabilities - The combined debts and obligations that the company owes to outside parties.
 * X18	Total Operating Expenses - The expenses a business incurs through its normal business operations.
 
-The predictor variable in the dataset was substentially imbalanced. The offset the imbalance, I used precision recall curve and ROC curve from scikit-learn to find the best threshold to improve f1 score.
+[Graphs/PredictorCount.png] 
+As seen above, the distribution of the predictor variable is imbalanced which can cause issues in the model prediction.
+To offset the imbalance, I used precision recall curve and ROC curve from scikit-learn to find the best threshold to improve f1 score.
+
+Here's the Classification Report of the Base Random Tree Classifier Model:
+[Graphs/BaseModel.png]
+
+Here's the graph and Classification Report of the Random Tree Classifier Model with the best threshold using Precision Recall Curve:
+[Graphs/PrecisionRecallGraph.png] 
+[Graphs/PrecisionRecallAdj.png]
+
+Finally, the graph and Classification Report of the Random Tree Classifier Model with the best threshold using ROC:
+[Graphs/ROCGraph.png]
+[Graphs/ROCAdj.png]
+
+I concluded that Precision Recall Curve gave me the best F1 Score with a minimal loss in accuracy.
+
+
+
 
